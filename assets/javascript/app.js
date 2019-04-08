@@ -1,17 +1,14 @@
-var actors = ["michaelkeaton", "emmawatson", "natalieportman", "jonhamm"];
+var actors = ["michael keaton", "emma watson", "natalie portman", "jon hamm"];
 
 $(document).ready(function(){
-    for (i = 0; i < actors.length; i++) {
-        var a = $("<button>");
-        // Adding a class
-        a.addClass("actor");
-        // Adding a data-attribute with a value of the movie at index i
-        a.attr("data-name", actors[i]);
-        // Providing the button's text with a value of the movie at index i
-        a.text(actors[i]);
-        // Adding the button to the HTML
-        $("#buttons").append(a);
-    };
+
+        for (i = 0; i < actors.length; i++) {
+            var a = $("<button>");
+            a.addClass("actor");
+            a.attr("data-name", actors[i]);
+            a.text(actors[i]);
+            $("#buttons").append(a);
+        };
 
     
     //////////////////////////////////////////////////////////////////////////When adding classes from here, its not working
@@ -30,7 +27,7 @@ $(document).ready(function(){
     });
 
     //when selecting an actor button
-    $(".actor").on("click", function(){
+    $("#buttons").on("click", ".actor", function(){
         //actor = $(".actor").val();
         console.log($(this).data("name"));
         console.log(this);
@@ -63,7 +60,7 @@ $(document).ready(function(){
             });
     });
 //////////////////////////////////////////////////////////////////////////When adding classes from here, its not working
-    $(".gif").on("click", function() {
+    $("#gifsGoHere").on("click", ".gif", function() {
         console.log("thisIsWorking")
         console.log(this);
         var state = $(this).attr("data-state");
@@ -77,9 +74,3 @@ $(document).ready(function(){
     });
     
 });
-
-    //PLAN OF ACTION
-    //1 - when selecting a actor button, injecting that into query url
-    //2 - display those gifs
-    //3 - when typing in a user, adding them to button array
-    //4 - when sekecting new button, their images show up
