@@ -47,12 +47,12 @@ $(document).ready(function(){
                     var $p = $("<p>").text("Rating: " + response.data[i].rating);
                     var $p2 = $("<p>").text("Title: " + response.data[i].title);
                     var actorImage = $("<img>");
-                    actorImage.attr("src", response.data[i].images.original_still.url);
+                    actorImage.attr("src", response.data[i].images.fixed_height_still.url);
                     gifDiv.append($p2);
                     gifDiv.append($p);
                     gifDiv.append(actorImage);
                     $("#gifsGoHere").prepend(gifDiv);
-                    actorImage.attr("data-still", response.data[i].images.original_still.url)
+                    actorImage.attr("data-still", response.data[i].images.fixed_height_still.url)
                     actorImage.attr("data-animate", response.data[i].images.fixed_height.url)
                     actorImage.addClass("gif");
                     actorImage.attr("data-state", "still");
