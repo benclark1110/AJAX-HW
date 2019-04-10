@@ -1,9 +1,12 @@
-.gif {
-    display: inline;
+body{
+    background: lightgray;
+    font-family: sans-serif
 }
 
-button {
-    background: gray;
-    line-height: 20px;
+.actor{
+    margin: 5px;
 }
+
+
+
 
